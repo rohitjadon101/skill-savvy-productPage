@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.container{
+    padding: 4em;
+    padding-top: 8em;
+    background-color: rgb(114, 114, 130);
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    color: rgb(95, 89, 89);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+}
+#cart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+    gap: 1em;
+}
+.cart-item{
+    width: 60em;
+    background-color: white;
+    display: flex;
+    gap: 6em;
+    padding: 1em;
+    border-radius: 1em;
+}
+.image-div{
+    width: 150px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 1em;
+}
+.image-div img{
+    width: 100%;
+    height: 100%;
+}
+.content-div h2{
+    color: rgb(47, 50, 45);
+}
+.price{
+    margin-top: 1em;
+    padding: .4em 1.8em;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: green;
+    border-radius: 1em;
+    width: fit-content;
+}
+.quantity{
+    margin-top: 0.4em;
+    color: black;
+}
+
+/* For Header */
+.header{
+    width: 100%;
+    max-width: 100vw;
+    padding: 25px 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(76, 76, 99);
+    color: white;
+    position: fixed;
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+li{
+    list-style: none;
+}
+li:hover{
+    color: rgb(161, 161, 190);
+    scale: 1.2;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container{
+        padding-top: 10em;
+    }
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1em;
+    }
+    .image-div {
+        width: 100%;
+        height: auto;
+    }
+    .price {
+        font-size: 1em;
+        padding: 0.4em 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 1em;
+    }
+    .nav-links {
+        margin-top: 1em;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
